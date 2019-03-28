@@ -1,0 +1,25 @@
+{
+  "disabled": false,
+  "bindings": [{
+      "name": "context",
+      "type": "orchestrationClient",
+      "direction": "in"
+    },
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ],
+      "route": "stop/{input}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
