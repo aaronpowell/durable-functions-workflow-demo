@@ -6,8 +6,6 @@ namespace DurableWorkflow
 {
     public static class Workflow
     {
-        public static string EventName = "foo";
-
         [FunctionName("Workflow")]
         public static async Task Run(
             [OrchestrationTrigger]DurableOrchestrationContext context,
@@ -17,7 +15,7 @@ namespace DurableWorkflow
             var input = context.GetInput<string>();
             logger.LogInformation($"Starting workflow for {input}");
 
-            await context.WaitForExternalEvent(EventName);
+            await context.WaitForExternalEvent(nameof(Workflow));
 
             logger.LogInformation($"Workflow for {input} is stopping");
         }
