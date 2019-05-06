@@ -25,12 +25,12 @@ When the demo functions have started up they will consist of 3 API endpoints:
 
 # How it works
 
-The demo creates 4 Azure functions, 3 of which have a [`HttpTrigger` binding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook) and 1 [`OrchestrationTrigger` binding](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-bindings#orchestration-triggers).
+The demo creates 4 Azure functions, 3 of which have a [`HttpTrigger` binding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook?WT.mc_id=durablefunctionsworkflowdemo-github-aapowell) and 1 [`OrchestrationTrigger` binding](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-bindings?WT.mc_id=durablefunctionsworkflowdemo-github-aapowell#orchestration-triggers).
 
-Each HTTP Function also receives the [`OrchestrationClient`](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-bindings#orchestration-client) input which allows them to interact with Durable Functions.
+Each HTTP Function also receives the [`OrchestrationClient`](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-bindings?WT.mc_id=durablefunctionsworkflowdemo-github-aapowell#orchestration-client) input which allows them to interact with Durable Functions.
 
 The `Workflow` Function will be triggered by the `StartWorkflow` function and then it will wait for an external event to be triggered. While it's waiting the function is in a 'sleep' state and not consuming any resources, but when the event is triggered it will start at the point it had run up to and continue on (in this case run to completion). The event is triggered in the `StopWorkflow` Function.
 
 # License
 
-Aaron Powell - 2019
+MIT Aaron Powell - 2019
