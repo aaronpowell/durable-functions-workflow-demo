@@ -1,0 +1,9 @@
+{
+  "FSharp.fsacRuntime": "netcore",
+  "azureFunctions.projectRuntime": "~2",
+  "azureFunctions.projectLanguage": "C#",
+  "azureFunctions.deploySubpath": "DurableWorkflow/bin/Release/netcoreapp2.1/publish",
+  "azureFunctions.preDeployTask": "publish",
+  "debug.internalConsoleOptions": "neverOpen",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+}
